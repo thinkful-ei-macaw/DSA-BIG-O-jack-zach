@@ -15,5 +15,5 @@ function print(a, b) {
 }
 
 // hanoi(2, 'A', 'C', 'B');
-hanoi(3, 'A', 'C', 'B');
+hanoi(5, 'A', 'C', 'B');
 // hanoi(5, 'A', 'C', 'B');
