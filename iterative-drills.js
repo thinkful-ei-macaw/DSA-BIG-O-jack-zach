@@ -58,7 +58,8 @@ function stringSplitter(string, splitter) {
   const result = [];
   let builder = '';
 
-  stringArray.forEach((char) => {
+  stringArray.forEach((char, i) => {
+    if (i === 0 && char === splitter) return;
     if (char !== splitter) builder += char;
     if (char === splitter) {
       result.push(builder);
@@ -71,7 +72,7 @@ function stringSplitter(string, splitter) {
   return result;
 }
 
-console.log(stringSplitter('02/20/2020', '/'));
+console.log(stringSplitter('/02/20/2020', '/'));
 
 /* Fibonacci */
 
