@@ -59,10 +59,11 @@ function stringSplitter(string, splitter) {
   let builder = '';
 
   stringArray.forEach((char, i) => {
-    if (i === 0 && char === splitter) return;
     if (char !== splitter) builder += char;
     if (char === splitter) {
-      result.push(builder);
+      if (builder !== '') {
+        result.push(builder);
+      }
       builder = '';
     }
   });
